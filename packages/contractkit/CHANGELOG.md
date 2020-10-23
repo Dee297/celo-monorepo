@@ -13,7 +13,7 @@ Bug Fixes
 - Handle errors when fetching contract addresses from registry - [#5301](https://github.com/celo-org/celo-monorepo/pull/5301)
 
 Other Changes
-- [one-line summary] - ( [link PR] )
+- Refactor explorer (add base, mod block/log) and simplify consumption  - [#5567](https://github.com/celo-org/celo-monorepo/pull/5567)
 
 
 ## Published
