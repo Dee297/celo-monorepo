@@ -13,8 +13,7 @@ Bug Fixes
 - Handle errors when fetching contract addresses from registry - [#5301](https://github.com/celo-org/celo-monorepo/pull/5301)
 
 Other Changes
-- [one-line summary] - ( [link PR] )
-
+- Parallelize and simplify fetching of comprensive registry address map - [#5568](https://github.com/celo-org/celo-monorepo/pull/5568)
 
 ## Published
 ### **[0.4.14]** -- 2020-09-23
