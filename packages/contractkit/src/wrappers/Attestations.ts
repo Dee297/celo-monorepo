@@ -11,6 +11,7 @@ import { Attestations } from '../generated/Attestations'
 import { ClaimTypes, IdentityMetadataWrapper } from '../identity'
 import {
   BaseWrapper,
+  blocksToDurationString,
   proxyCall,
   toTransactionObject,
   valueToBigNumber,
@@ -389,6 +390,7 @@ export class AttestationsWrapper extends BaseWrapper<Attestations> {
   /**
    * Returns the current configuration parameters for the contract.
    * @param tokens List of tokens used for attestation fees.
+   * @return AttestationsConfig object
    */
   async getConfig(tokens: string[]): Promise<AttestationsConfig> {
     const fees = await Promise.all(
@@ -400,6 +402,18 @@ export class AttestationsWrapper extends BaseWrapper<Attestations> {
     return {
       attestationExpiryBlocks: await this.attestationExpiryBlocks(),
       attestationRequestFees: fees,
+    }
+  }
+
+  /**
+   * @dev Returns human readable configuration of the attestations contract
+   * @return AttestationsConfig object
+   */
+  async getHumanReadableConfig(tokens: string[]) {
+    const config = await this.getConfig(tokens)
+    return {
+      attestationRequestFees: config.attestationRequestFees,
+      attestationExpiry: blocksToDurationString(config.attestationExpiryBlocks),
     }
   }
 
