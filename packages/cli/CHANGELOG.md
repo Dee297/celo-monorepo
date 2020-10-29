@@ -7,7 +7,7 @@ This package will follow the release process outlined [here](https://docs.celo.o
 ## Development (not published yet)
 ### **[0.0.61--dev]**
 Features
-- [one-line summary] - ( [link PR] )
+- Add downtime slashing commands - [#5632](https://github.com/celo-org/celo-monorepo/pull/5632)
 
 Bug Fixes
 - [one-line summary] - ( [link PR] )
