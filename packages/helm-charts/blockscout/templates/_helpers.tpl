@@ -50,6 +50,8 @@ volumes:
   value: "127.0.0.1"
 - name: DATABASE_PORT
   value: "5432"
+- name: HEALTHY_BLOCKS_PERIOD
+  value: {{ .Values.blockscout.healthy_blocks_period }}
 - name: MIX_ENV
   value: prod
 - name: LOGO
